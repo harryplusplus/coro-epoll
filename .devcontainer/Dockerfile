@@ -25,7 +25,6 @@ RUN apt update && \
     ln -s /usr/bin/lldb-vscode-14 /usr/bin/lldb-dap
 
 USER vscode
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.88.0
 RUN echo 'alias ll="ls -a -p -lh"' >> ~/.bashrc
 
 WORKDIR /work
