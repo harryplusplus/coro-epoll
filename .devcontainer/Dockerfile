@@ -18,13 +18,17 @@ RUN apt update && \
     ninja-build \
     valgrind \
     linux-perf \
-    # To open in a browser on the host
+    # Use xdg-open to forward URLs to the host system.
     xdg-utils \
+    # Use pipx to install cmake-format.
+    pipx \
     && apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     ln -s /usr/bin/lldb-vscode-14 /usr/bin/lldb-dap
 
 USER vscode
+RUN pipx ensurepath && \
+    pipx install cmakelang
 RUN echo 'alias ll="ls -a -p -lh"' >> ~/.bashrc
 
 WORKDIR /work

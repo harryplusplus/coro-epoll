@@ -21,6 +21,7 @@ cmake --version
 ninja --version
 valgrind --version
 perf --version
+xdg-open --version
 
-rustc --version
-cargo --version
+pipx --version
+cmake-format --version
