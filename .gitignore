@@ -1,8 +1,5 @@
 # CMake
 /build/
 
-# Clangd
+# clangd
 /.cache/
-
-# Rust
-/target/
